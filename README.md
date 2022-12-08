@@ -7,7 +7,7 @@ Module sổ đầu bài điện tử với các chức năng quản lý và hi�
 - Khởi tạo module sổ đầu bài điện tử
 
 
-# V1.1.00
+## V1.1.00
 - Chức năng cấu hình Sở, phòng, trường.
 - Chức năng quản lý lớp
 - Chức năng quản lý môn học
