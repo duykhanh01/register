@@ -72,47 +72,47 @@
                 <div class="mb-3">
                     <lable>Môn:</lable>
                     <div class="form-group">
-                        <select name="grade" class="form-control">
-                            <option value="" selected="selected">Công nghệ</option>
-                            <option value="1">Tiếng anh</option>
+                        <select name="subject" class="form-control subject">
+                            <option value="" selected="selected">Chọn môn</option>
+                            {optionSubject}
                         </select>
                     </div>
                 </div>
                 <div class="mb-3">
                     <lable>PPCT:</lable>
-                    <div class="form-group mb-0"><input class="form-control frm-item" name="pseudonym" id="pseudonym" type="text" value=""
+                    <div class="form-group mb-0"><input class="form-control frm-item subject_detail" name="subject_detail" id="pseudonym" type="text" value=""
                                                         maxlength="100" data-mess=""></div>
                 </div>
                 <div class="mb-3">
                     <lable>Tên bài dạy:</lable>
-                    <div class="form-group mb-0"><input class="form-control frm-item" name="pseudonym" id="pseudonym" type="text" value=""
+                    <div class="form-group mb-0"><input class="form-control frm-item subject_detail_name" name="subject_detail_name" id="pseudonym" type="text" value=""
                                                         maxlength="100" data-mess=""></div>
                 </div>
                 <div class="mb-3">
                     <lable>Số học sinh vắng:</lable>
-                    <div class="form-group mb-0"><input class="form-control frm-item" name="pseudonym" id="pseudonym" type="text" value=""
+                    <div class="form-group mb-0"><input class="form-control frm-item absent_students" name="absent_students" id="pseudonym" type="text" value=""
                                                         maxlength="100" data-mess=""></div>
                 </div>
                 <div class="mb-3">
                     <lable>Nhận xét tiết học:</lable>
-                    <div class="form-group mb-0"><input class="form-control frm-item" name="pseudonym" id="pseudonym" type="text-area"
+                    <div class="form-group mb-0"><input class="form-control frm-item comment_lesson" name="comment_lesson" id="pseudonym" type="text-area"
                                                         value="" maxlength="100" data-mess=""></div>
                 </div>
                 <div class="mb-3">
                     <lable>Cho điểm xếp loại:</lable>
-                    <div class="form-group mb-0"><input class="form-control frm-item" name="pseudonym" id="pseudonym" type="text" value=""
+                    <div class="form-group mb-0"><input class="form-control frm-item point_lesson" name="point_lesson" id="pseudonym" type="text" value=""
                                                         maxlength="100" data-mess=""></div>
                 </div>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Đóng</button>
-                <button type="button" class="btn btn-primary" current-date="" lesson="" schedule_id="" teacher_id="" title="">Thực hiện
+                <button type="button" class="btn btn-primary btn-action-submit" number="" current-date="" lesson="" schedule_id="" teacher_id="" title="">Thực hiện
                 </button>
             </div>
         </div>
     </div>
+    <input type="hidden" name="" class="gv-info" ten-gv="{tenGV}" id-gv="{idGV}">
 </div>
 
 
 <!-- END: main -->
-<script type="text/javascript" src="{NV_BASE_SITEURL}{NV_ASSETS_DIR}/js/register.js"></script>

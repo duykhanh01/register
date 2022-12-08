@@ -22,5 +22,7 @@ if (defined('NV_IS_SPADMIN')) {
     $allow_func[] = 'subject_detail';
     $allow_func[] = 'week';
     $allow_func[] = 'register';
+    $allow_func[] = 'add_lesson';
+    $allow_func[] = 'getSubjectDetail';
 }
 

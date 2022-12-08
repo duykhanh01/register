@@ -6,6 +6,15 @@ Module sổ đầu bài điện tử với các chức năng quản lý và hi�
 ## V1.0.00
 - Khởi tạo module sổ đầu bài điện tử
 
+
+# V1.1.00
+- Chức năng cấu hình Sở, phòng, trường.
+- Chức năng quản lý lớp
+- Chức năng quản lý môn học
+- Chức năng quản lý tuần học
+- Chức năng quản lý PPCT
+- Chức năng quản lý sổ đầu bài
+
 # Setup 
 
 - Tải module tại: https://github.com/duykhanh01/register.git.
