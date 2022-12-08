@@ -24,5 +24,6 @@ if (defined('NV_IS_SPADMIN')) {
     $allow_func[] = 'register';
     $allow_func[] = 'add_lesson';
     $allow_func[] = 'getSubjectDetail';
+    $allow_func[] = 'add_subject_detail';
 }
 

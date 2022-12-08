@@ -34,7 +34,7 @@
     <div class="col-xs-12 col-md-6">
         <div class="form-group">
             <input type="submit" value="Tìm kiếm" class="btn btn-info">
-            <a href="" class="btn btn-success">Nhập excel</a>
+            <a href="{URL_IMPORT}" class="btn btn-success">Nhập excel</a>
 
         </div>
 

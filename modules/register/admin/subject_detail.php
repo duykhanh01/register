@@ -151,7 +151,7 @@ if (isset($_GET['id'])){
     $xtpl->assign('HTML_YEAR', $htmlSelectYear);
     $xtpl->assign('HTML_SUBJECT', $htmlSelectSubject);
 }
-
+$xtpl->assign('URL_IMPORT', NV_BASE_ADMINURL.'index.php?'.NV_LANG_VARIABLE.'='.NV_LANG_DATA.'&'.NV_NAME_VARIABLE.'='.$module_name.'&op='.'add_subject_detail');
 $page_title = 'Quản lý PPCT';
 $array_config = [];
 $xtpl->parse('main');
