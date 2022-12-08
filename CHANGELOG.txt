@@ -1,3 +1,6 @@
+REGISTER v1.2.00
+- Chức năng import PPCT từ excel
+
 REGISTER V1.1.00
 - Chức năng cấu hình Sở, phòng, trường.
 - Chức năng quản lý lớp
