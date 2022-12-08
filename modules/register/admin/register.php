@@ -8,6 +8,7 @@
  * @Createdate Thu, 8 Dec 2022 08:45:51 GMT
  */
 
+
 if ( ! defined('NV_IS_FILE_ADMIN')) {
     exit('Stop!!!');
 }
@@ -26,12 +27,12 @@ $xtpl->assign('idGV', $idGiaoVien);
 $xtpl->assign('tenGV', $fullnamegv);
 
 //config schedule co id =2
-$sql        = "SELECT * FROM `nv4_vi_register_schedules` WHERE id=2";
+$sql        = "SELECT * FROM nv4_vi_register_schedules WHERE id=2";
 $res        = $db->query($sql)->fetch();
 $sche_id    = $res['id'];
 
 //lay ra cac lesson co sche_id = $sche_id
-$sql_get_lesson = "SELECT * FROM `nv4_vi_register_lessons` WHERE sche_id='$sche_id'";
+$sql_get_lesson = "SELECT * FROM nv4_vi_register_lessons WHERE sche_id='$sche_id'";
 $res_lessons        = $db->query($sql_get_lesson)->fetchAll();
 
 $start_date = $res['start'];
@@ -130,7 +131,7 @@ for ($day = 2; $day <= 8; $day++) {
 }
 $xtpl->assign('html', $printHtml);
 
-$sql  = 'SELECT * FROM `nv4_vi_register_subjects`';
+$sql  = 'SELECT * FROM nv4_vi_register_subjects';
 $arrSubject = $db->query($sql)->fetchAll();
 $htmlSubject = '';
 foreach ($arrSubject as $subject){
@@ -139,9 +140,15 @@ foreach ($arrSubject as $subject){
 $xtpl->assign('optionSubject', $htmlSubject);
 
 
+$sql_get_schedule = "SELECT * FROM nv4_vi_register_schedules";
+$res_schedules = $db->query($sql_get_schedule)->fetchAll();
+$html_schedule = '';
+foreach ($res_schedules as $res){
+    $html_schedule .= '<option value="'.$res['id'].'">'.$res['name'].' từ '.$res['start'].' đến '.$res['end'].'</option>';
+}
+$xtpl->assign('html_schedule', $html_schedule);
 $xtpl->parse('main');
 $contents = $xtpl->text('main');
 include NV_ROOTDIR.'/includes/header.php';
 echo nv_admin_theme($contents);
 include NV_ROOTDIR.'/includes/footer.php';
-

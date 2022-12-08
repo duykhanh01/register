@@ -8,7 +8,8 @@
  */
 
 $(document).ready(function(){
-    $('.btn-add-lesson').click(function(){
+
+    $(document).on('click','.btn-add-lesson',function() {
         let date = $(this).attr('current-date');
         let lesson = $(this).attr('lesson');
         let scheledule_id = $(this).attr('schedule_id');
@@ -20,7 +21,7 @@ $(document).ready(function(){
         $('.btn-action-submit').attr('teacher_id',teacher_id);
         $('.btn-action-submit').attr('number',number);
     })
-    $('.btn-action-submit').click(function(){
+    $(document).on('click','.btn-action-submit',function() {
         let subject = $('.subject').val();
         let subject_name = $('.subject option:selected').text();
         let subject_detail = $('.subject_detail').val();
@@ -58,21 +59,38 @@ $(document).ready(function(){
         });
 
     })
-   $('.subject_detail').keyup(function(){
-       let id = $('.subject').val();
-       let id_ppct = $(this).val();
-       console.log(id_ppct);
-       console.log(id);
-       $.ajax({
-           url: 'index.php?language=vi&nv=register&op=getSubjectDetail',
-           type: 'POST',
-           dataType: 'html',
-           data: {
-               'id_mh' : id,
-               'id_ppct': id_ppct,
-           }
-       }).done(function(ketqua) {
-           $('.subject_detail_name').val(ketqua);
-       });
-   })
+    $('.subject_detail').keyup(function(){
+        let id = $('.subject').val();
+        let id_ppct = $(this).val();
+        console.log(id_ppct);
+        console.log(id);
+        $.ajax({
+            url: 'index.php?language=vi&nv=register&op=getSubjectDetail',
+            type: 'POST',
+            dataType: 'html',
+            data: {
+                'id_mh' : id,
+                'id_ppct': id_ppct,
+            }
+        }).done(function(ketqua) {
+            $('.subject_detail_name').val(ketqua);
+        });
+    })
+    $('.grade').change(function(){
+        let id_schedule = $('.grade option:selected').val();
+        let start = $('.grade option:selected').attr('start');
+        let end = $('.grade option:selected').attr('end');
+        $.ajax({
+            url: 'index.php?language=vi&nv=register&op=getTableSchedule',
+            type: 'POST',
+            dataType: 'html',
+            data: {
+                'id_schedule' : id_schedule,
+                'start': start,
+                'end': end,
+            }
+        }).done(function(ketqua) {
+            $('.tbody-schedule').html(ketqua);
+        });
+    })
 });

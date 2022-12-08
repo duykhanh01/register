@@ -1,41 +1,41 @@
+
+
 <!-- BEGIN: main -->
+
 <div class="">
     <div id="contentmod">
         <div class="row">
             <div class="col-xs-12 col-md-4">
                 <div class="form-group">
                     <select name="year" class="form-control">
-                        <option value="0">Chọn năm học</option>
                         <option value="1">2022-2023</option>
                     </select>
                 </div>
             </div>
             <div class="col-xs-12 col-md-6">
                 <div class="form-group">
-                    <select name="grade" class="form-control">
-                        <option value="" selected="selected">Chọn tuần</option>
-                        <option value="1">Tuần 1 từ 01/12/2022 đến 07/12/2022</option>
+                    <select name="grade" class="form-control grade">
+                        {html_schedule}
                     </select>
                 </div>
             </div>
             <div class="col-xs-12 col-md-4">
                 <div class="form-group">
                     <select name="subject" class="form-control">
-                        <option value="" selected="selected">Chọn lớp</option>
                         <option value="1">12A1</option>
                     </select>
                 </div>
             </div>
             <div class="col-xs-12 col-md-6">
                 <div class="form-group">
-                    <a href="" class="btn btn-success">Tải excel</a>
+                    <span href="" class="btn btn-success btn-export-excel">Tải excel</span>
 
                 </div>
 
             </div>
 
         </div>
-        <table class="table table-bordered">
+        <table class="table table-bordered table-schedule" id="tbl_exporttable_to_xls">
             <thead>
             <tr>
                 <th scope="col">Thứ/Ngày</th>
@@ -51,7 +51,7 @@
             </tr>
             </thead>
 
-            <tbody>
+            <tbody class="tbody-schedule">
             {html}
             </tbody>
 
@@ -114,5 +114,8 @@
     <input type="hidden" name="" class="gv-info" ten-gv="{tenGV}" id-gv="{idGV}">
 </div>
 
-
 <!-- END: main -->
+<script>
+
+
+</script>
