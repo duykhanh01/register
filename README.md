@@ -1,6 +1,7 @@
 # Module Register
-Module sổ đầu bài điện tử với các chức năng quản lý và hiển thị sổ đầu bài.
+[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0.html)
 
+Module sổ đầu bài điện tử với các chức năng quản lý và hiển thị sổ đầu bài.
 
 # Changelogs
 ## V1.0.00
@@ -24,6 +25,11 @@ Module sổ đầu bài điện tử với các chức năng quản lý và hi�
 - Nhấn bỏ qua cảnh báo.
 - Chọn "Thiết lập module mới" trong "Quản lý Modules".
 - Tìm module có tên "Register" và nhấn thiết lập.
+
+# Tác giả
+- Nguyễn Minh Hiếu
+- Ngô Duy Khánh
+- Mai Đình Công
 
 # License
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0.html)
