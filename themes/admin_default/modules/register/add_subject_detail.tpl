@@ -1,7 +1,7 @@
 <!-- BEGIN: main -->
 <div id="users">
     <div class="container">
-        <form action="{FORM_ACTION}" method="post">
+        <form action="{URL_SUBMIT}" method="post" enctype="multipart/form-data">
             <div class="form-group ">
                 <select class="form-control " name="year" id="uid">
                     <option value="0">Chọn năm học</option>
@@ -22,9 +22,9 @@
             </div>
             <div class="form-group">
                 <label for="exampleInputPassword1">Chọn file</label>
-                <input type="file" class="" name="file">
+                <input type="file" name="import" class="form-control" />
             </div>
-            <button type="submit" class="btn btn-primary">Thêm</button>
+            <button type="submit" name="submit" class="btn btn-primary">Thêm</button>
         </form>
     </div>
 
