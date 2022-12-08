@@ -17,5 +17,10 @@ define('NV_IS_FILE_ADMIN', true);
 
 if (defined('NV_IS_SPADMIN')) {
     $allow_func[] = 'config';
+    $allow_func[] = 'class';
+    $allow_func[] = 'subject';
+    $allow_func[] = 'subject_detail';
+    $allow_func[] = 'week';
+    $allow_func[] = 'register';
 }
 
